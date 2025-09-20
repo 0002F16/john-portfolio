@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Yumul — UX Design</title>
+  <!-- Google Font: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAFAFA; /* off-white */
+      --bg-alt: #F7F7F7; /* optional alt */
+      --text: #000000; /* pure black */
+      --muted: #9a9a9a;
+      --maxw: 1120px;
+      --radius: 16px;
+      --gap: 24px;
+    }
+
+    /* Global reset & base */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 18px; /* 16–20px base */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: saturate(180%) blur(6px);
+      background: color-mix(in oklab, var(--bg) 85%, white 15%);
+      border-bottom: 1px solid #e9e9e9;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { font-weight: 800; letter-spacing: 0.5px; }
+
+    /* Hero */
+    .hero { min-height: 100svh; display: grid; place-items: center; }
+    .hero-inner { text-align: center; padding: 80px 0; opacity: 0; transform: translateY(12px); animation: fadeUp 800ms ease-out 60ms forwards; }
+    .hero h1 { font-size: clamp(40px, 10vw, 88px); line-height: 1.05; margin: 0; font-weight: 800; }
+    .hero p { margin: 12px 0 0; font-size: clamp(18px, 3.5vw, 28px); font-weight: 300; letter-spacing: 0.5px; }
+
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* Companies / Carousel */
+    .section { padding: 32px 0 72px; }
+    .section h2 { font-size: 18px; font-weight: 600; margin: 0 0 16px; letter-spacing: 0.4px; }
+
+    .carousel {
+      position: relative; overflow: hidden; border-radius: var(--radius);
+      background: var(--bg-alt);
+      border: 1px solid #ececec;
+    }
+    .carousel-viewport { /* focusable region for keyboard & pause on focus */
+      outline: none; display: block;
+    }
+    .track {
+      display: flex; align-items: center; gap: var(--gap);
+      padding: 20px; will-change: transform;
+      transition: transform 400ms ease;
+    }
+    .slide {
+      flex: 0 0 auto; display: grid; place-items: center;
+      height: 80px; width: clamp(160px, 22vw, 240px);
+      background: white; border: 1px solid #ededed; border-radius: calc(var(--radius) - 8px);
+      filter: grayscale(100%); /* logos grayscale */
+    }
+    .slide img { max-height: 40px; max-width: 75%; display: block; }
+
+    /* Controls */
+    .controls { position: absolute; inset: 0; display: flex; justify-content: space-between; align-items: center; pointer-events: none; }
+    .btn {
+      pointer-events: auto; border: 1px solid #dcdcdc; background: white; color: #000;
+      height: 40px; aspect-ratio: 1/1; border-radius: 999px; display: grid; place-items: center;
+      margin: 0 8px; cursor: pointer; transition: transform 160ms ease, background 160ms ease;
+    }
+    .btn:hover { transform: scale(1.04); }
+    .btn:focus-visible { outline: 3px solid #000; outline-offset: 2px; }
+
+    /* Footer */
+    footer { border-top: 1px solid #e9e9e9; padding: 24px 0; color: #333; font-size: 14px; }
+
+    /* High contrast text ratio (≥ 7:1) is inherently met with #000 on off-white) */
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .track { gap: 16px; }
+      .slide { width: clamp(140px, 50vw, 200px); height: 72px; }
+      .slide img { max-height: 36px; }
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-inner { animation: none; opacity: 1; transform: none; }
+      .track { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main">
+      <div class="brand" aria-label="Site logo">JY</div>
+      <div style="font-size:14px; color:#444;">UX Design</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-inner container">
+        <h1>John Yumul</h1>
+        <p>UX Design</p>
+      </div>
+    </section>
+
+    <!-- Companies Slider -->
+    <section class="section container" aria-labelledby="companies-title">
+      <h2 id="companies-title">Previously worked with</h2>
+      <div class="carousel" aria-roledescription="carousel" aria-label="Company logos">
+        <div class="controls" aria-hidden="false">
+          <button class="btn" id="prevBtn" aria-label="Previous logos" title="Previous">
+            &#8592;
+          </button>
+          <button class="btn" id="nextBtn" aria-label="Next logos" title="Next">
+            &#8594;
+          </button>
+        </div>
+        <div class="carousel-viewport" tabindex="0" id="viewport">
+          <div class="track" id="track" role="group" aria-label="Logo slides">
+            <!-- Placeholder logo slides (replace src with real logos as needed) -->
+            <div class="slide"><img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='320' height='80'><rect width='100%' height='100%' fill='white' /><text x='50%' y='55%' text-anchor='middle' font-family='Montserrat, Arial' font-size='22' fill='%23999'>Company 1</text></svg>" alt="Company 1 logo"></div>
+            <div class="slide"><img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='320' height='80'><rect width='100%' height='100%' fill='white' /><text x='50%' y='55%' text-anchor='middle' font-family='Montserrat, Arial' font-size='22' fill='%23999'>Company 2</text></svg>" alt="Company 2 logo"></div>
+            <div class="slide"><img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='320' height='80'><rect width='100%' height='100%' fill='white' /><text x='50%' y='55%' text-anchor='middle' font-family='Montserrat, Arial' font-size='22' fill='%23999'>Company 3</text></svg>" alt="Company 3 logo"></div>
+            <div class="slide"><img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='320' height='80'><rect width='100%' height='100%' fill='white' /><text x='50%' y='55%' text-anchor='middle' font-family='Montserrat, Arial' font-size='22' fill='%23999'>Company 4</text></svg>" alt="Company 4 logo"></div>
+            <div class="slide"><img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='320' height='80'><rect width='100%' height='100%' fill='white' /><text x='50%' y='55%' text-anchor='middle' font-family='Montserrat, Arial' font-size='22' fill='%23999'>Company 5</text></svg>" alt="Company 5 logo"></div>
+            <div class="slide"><img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='320' height='80'><rect width='100%' height='100%' fill='white' /><text x='50%' y='55%' text-anchor='middle' font-family='Montserrat, Arial' font-size='22' fill='%23999'>Company 6</text></svg>" alt="Company 6 logo"></div>
+            <div class="slide"><img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='320' height='80'><rect width='100%' height='100%' fill='white' /><text x='50%' y='55%' text-anchor='middle' font-family='Montserrat, Arial' font-size='22' fill='%23999'>Company 7</text></svg>" alt="Company 7 logo"></div>
+            <div class="slide"><img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='320' height='80'><rect width='100%' height='100%' fill='white' /><text x='50%' y='55%' text-anchor='middle' font-family='Montserrat, Arial' font-size='22' fill='%23999'>Company 8</text></svg>" alt="Company 8 logo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> John Yumul. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // --- Utilities ---
+    const qs = (sel, ctx = document) => ctx.querySelector(sel);
+    const qsa = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+
+    // --- Carousel Logic ---
+    const track = qs('#track');
+    const viewport = qs('#viewport');
+    const prevBtn = qs('#prevBtn');
+    const nextBtn = qs('#nextBtn');
+
+    let index = 0;
+    let slideWidth = 0;
+    let autoTimer = null;
+    let isPaused = false;
+
+    function measure() {
+      // Use first slide width including gap
+      const first = track.firstElementChild;
+      if (!first) return;
+      const firstRect = first.getBoundingClientRect();
+      const trackRect = track.getBoundingClientRect();
+      // Approx width + gap by checking the next slide
+      const second = first.nextElementSibling;
+      if (second) {
+        slideWidth = second.getBoundingClientRect().left - firstRect.left;
+      } else {
+        slideWidth = firstRect.width + 24; // fallback
+      }
+      update();
+    }
+
+    function clampIndex(i) {
+      const slides = qsa('.slide', track);
+      const max = Math.max(0, slides.length - 1);
+      if (i < 0) return max;
+      if (i > max) return 0;
+      return i;
+    }
+
+    function update() {
+      track.style.transform = `translateX(${-index * slideWidth}px)`;
+    }
+
+    function next() { index = clampIndex(index + 1); update(); }
+    function prev() { index = clampIndex(index - 1); update(); }
+
+    // Auto-scroll with pause on hover/focus
+    function startAuto() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      stopAuto();
+      autoTimer = setInterval(() => { if (!isPaused) next(); }, 2500);
+    }
+    function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+
+    // Pause on hover/focus inside the carousel
+    const carousel = viewport.closest('.carousel');
+    carousel.addEventListener('mouseenter', () => { isPaused = true; });
+    carousel.addEventListener('mouseleave', () => { isPaused = false; });
+    carousel.addEventListener('focusin', () => { isPaused = true; });
+    carousel.addEventListener('focusout', () => { isPaused = false; });
+
+    // Buttons
+    prevBtn.addEventListener('click', () => { prev(); });
+    nextBtn.addEventListener('click', () => { next(); });
+
+    // Keyboard (left/right when viewport focused)
+    viewport.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); prev(); }
+    });
+
+    // Touch swipe
+    let startX = 0, dx = 0;
+    viewport.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; dx = 0; }, { passive: true });
+    viewport.addEventListener('touchmove',  (e) => { dx = e.touches[0].clientX - startX; }, { passive: true });
+    viewport.addEventListener('touchend',   () => {
+      if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
+      startX = 0; dx = 0;
+    });
+
+    // Resize handling
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', () => { measure(); startAuto(); });
+
+    // Footer year
+    qs('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
