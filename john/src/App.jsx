@@ -13,6 +13,45 @@ const companyLogos = [
   { name: 'Company 8', logo: '/images/logos/image 71.png' },
 ]
 
+// Testimonials data
+const testimonials = [
+  {
+    quote: "Easy to work with, smart, and articulate -with a great voice, too. We worked together on a hackathon project called Iskosenso, and we'd often have random chats about product design and other interesting topics. He's a strong thinker and a natural leader. I enjoy working with him.",
+    name: "rovic villaralvo",
+    affiliation: "product designer @ agentsly.ai"
+  },
+  {
+    quote: "I first had the chance to work with John when he invited me to join hackathon earlier this year. He has a clear and engaging way of expressing his thoughts, which makes it easy for everyone in the group to follow and connect with his ideas. What I admire most is that he doesn't just speak well but he listens, encourages input, and builds on others' suggestions, creating a truly collaborative environment. It's rare to meet someone who combines both strong technical thinking and people skills so effortlessly.",
+    name: "reinier luna",
+    affiliation: "batangas state university"
+  },
+  {
+    quote: "Bro makes sure to refine his work down to the details. Outside of work, John is a great mentor who exudes confidence and keeps a balance in his pursuits. I had the pleasure of working with him in a hackathon and joining a few networking events with him, and he definitely knows how to sell himself and deliver on his initiatives.",
+    name: "simonee mariquit",
+    affiliation: "fullstack developer @ ekonsulta"
+  },
+  {
+    quote: "John is really good at what he does. When it comes to design, he takes feedback well, and if you give him a suggestion, he'll definitely improve even more. While I'm not a designer myself, I really appreciate his minimalist style and simple UI. It's clean, easy to understand, and user-friendly for just about anyone.",
+    name: "john cris gonzales",
+    affiliation: "lead software engineer @ onlinecareers"
+  },
+  {
+    quote: "It's been great working with John. It has always been smooth to work with him since we are able to accomplish every task seamlessly.",
+    name: "angelo baricante",
+    affiliation: "freelance fullstack developer"
+  },
+  {
+    quote: "John has always been level-headed when it comes to the projects we've worked on together. I've known him for 5 years, and he has always been efficient in tasks assigned to him. He is very impartial when it comes to deciding on the creative direction of the project.",
+    name: "sam ardenio",
+    affiliation: "freelance artist, musician"
+  },
+  {
+    quote: "John is excellent at weighing pros and cons, and knows how to drive a company forward. His progressive mindset combined with the ability to communicate with others and mobilize them around his vision makes him a powerful force for innovation and drive positive change.",
+    name: "kim alexis",
+    affiliation: "marketing lead @ gen z book club"
+  }
+]
+
 function App() {
   // Create a duplicated array for seamless infinite scrolling
   const duplicatedLogos = [...companyLogos, ...companyLogos]
@@ -97,6 +136,48 @@ function App() {
           <p className="project-description">user experience research for the country's leading motor taxi hailing app</p>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <section className="testimonials">
+        <h2 className="testimonials-title">what people say</h2>
+        
+        <div className="testimonials-grid">
+          <div className="testimonials-column">
+            {testimonials.slice(0, 3).map((testimonial, index) => (
+              <div key={index} className="testimonial">
+                <p className="testimonial-quote">"{testimonial.quote}"</p>
+                <div className="testimonial-author">
+                  <h4 className="testimonial-name">{testimonial.name}</h4>
+                  <p className="testimonial-affiliation">{testimonial.affiliation}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="testimonials-column">
+            {testimonials.slice(3).map((testimonial, index) => (
+              <div key={index + 3} className="testimonial">
+                <p className="testimonial-quote">"{testimonial.quote}"</p>
+                <div className="testimonial-author">
+                  <h4 className="testimonial-name">{testimonial.name}</h4>
+                  <p className="testimonial-affiliation">{testimonial.affiliation}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="footer">
+        <p className="footer-question">like what you see?</p>
+        <h2 className="footer-cta">let's connect!</h2>
+        <div className="footer-links">
+          <a href="https://linkedin.com/in/yourprofile" className="footer-link">linkedin</a>
+          <a href="mailto:your.email@example.com" className="footer-link">email</a>
+          <a href="https://instagram.com/yourprofile" className="footer-link">instagram</a>
+        </div>
+      </footer>
     </div>
   )
 }
