@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -36,12 +36,21 @@ jobs:
         cd john
         npm run build
         
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Deploy to docs folder
       if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./john/dist
-        destination_dir: docs
-        cname: www.johnyumul.com
-        force_orphan: true
+      run: |
+        # Remove existing docs folder contents
+        rm -rf docs/*
+        # Copy built files to docs folder
+        cp -r john/dist/* docs/
+        # Copy CNAME file
+        cp john/dist/CNAME docs/ 2>/dev/null || echo "www.johnyumul.com" > docs/CNAME
+        
+    - name: Commit and push changes
+      if: github.ref == 'refs/heads/main'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/
+        git commit -m "Deploy to GitHub Pages" || exit 0
+        git push
