@@ -3,8 +3,8 @@ import './App.css'
 
 // Company logos data - using your actual image files
 const companyLogos = [
-  { name: 'Company 1', logo: '/images/logos/image 2.png' },
-  { name: 'Company 2', logo: '/images/logos/image 3.png' },
+  { name: 'Company 1', logo: '/images/logos/image 3.png' },
+  { name: 'Company 2', logo: '/images/logos/image 2.png' },
   { name: 'Company 3', logo: '/images/logos/image 4.png' },
   { name: 'Company 4', logo: '/images/logos/image 5.png' },
   { name: 'Company 5', logo: '/images/logos/image 68.png' },
@@ -111,7 +111,7 @@ function App() {
       {/* Organizations Section */}
       <section className="organizations">
         <h2 className="organizations-title">
-          Hhre are some of the organizations i've worked with
+          here are some of the organizations i've worked with
         </h2>
         
         <div className="slideshow-container">
@@ -201,9 +201,9 @@ function App() {
         <p className="footer-question">like what you see?</p>
         <h2 className="footer-cta">let's connect!</h2>
         <div className="footer-links">
-          <a href="https://linkedin.com/in/yourprofile" className="footer-link">linkedin</a>
-          <a href="mailto:your.email@example.com" className="footer-link">email</a>
-          <a href="https://instagram.com/yourprofile" className="footer-link">instagram</a>
+          <a href="https://www.linkedin.com/in/john-y-269ab4260/" className="footer-link">linkedin</a>
+          <a href="mailto:johnyumul.ph@gmail.com" className="footer-link">email</a>
+          <a href="https://www.instagram.com/john.yml/" className="footer-link">instagram</a>
         </div>
       </footer>
     </div>

@@ -254,17 +254,17 @@
 
 .slideshow-track {
   display: flex;
-  animation: slide 20s linear infinite;
+  animation: slide 40s linear infinite;
   width: calc(200% + 4rem); /* Double width for seamless loop */
 }
 
 .slideshow-item {
   flex: 0 0 auto;
-  width: calc(100% / 8); /* Each logo takes 1/8 of the track width */
+  width: calc(100% / 10); /* Each logo takes 1/8 of the track width */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 12 px;
   height: 120px;
 }
 
@@ -484,7 +484,7 @@
   }
   
   .slideshow-item {
-    padding: 0 6px;
+    padding: 0;
     height: 100px;
   }
   
