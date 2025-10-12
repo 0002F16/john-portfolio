@@ -76,14 +76,14 @@ function App() {
           <span className="hero-line">digital products</span>
         </h1>
         <p className="hero-subtitle">
-          Right now, you can find me doing ux research work for Angkas 🛵☁️
+          right now, you can find me doing ux research work for angkas 🛵☁️
         </p>
       </main>
 
       {/* Organizations Section */}
       <section className="organizations">
         <h2 className="organizations-title">
-          Here are some of the organizations i've worked with
+          Hhre are some of the organizations i've worked with
         </h2>
         
         <div className="slideshow-container">

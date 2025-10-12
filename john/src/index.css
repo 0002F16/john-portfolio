@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: 'Prestige Elite Std', 'Space Mono', monospace;
   line-height: 1.5;
