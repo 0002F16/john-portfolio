@@ -55,6 +55,13 @@ const testimonials = [
 function App() {
   // Create a duplicated array for seamless infinite scrolling
   const duplicatedLogos = [...companyLogos, ...companyLogos]
+  
+  // Mobile menu state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
 
   return (
     <div className="app">
@@ -66,6 +73,27 @@ function App() {
           <a href="#fun" className="nav-link">fun</a>
           <a href="#resume" className="nav-link">resume</a>
         </nav>
+        
+        {/* Mobile Menu Button */}
+        <button 
+          className={`mobile-menu-button ${isMobileMenuOpen ? 'open' : ''}`}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+        
+        {/* Mobile Menu Overlay */}
+        <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
+          <div className="mobile-menu-content">
+            <a href="#work" className="mobile-nav-link" onClick={toggleMobileMenu}>work</a>
+            <a href="#about" className="mobile-nav-link" onClick={toggleMobileMenu}>about</a>
+            <a href="#fun" className="mobile-nav-link" onClick={toggleMobileMenu}>fun</a>
+            <a href="#resume" className="mobile-nav-link" onClick={toggleMobileMenu}>resume</a>
+          </div>
+        </div>
       </header>
 
       {/* Hero Section */}
