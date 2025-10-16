@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 // Company logos data - using your actual image files
@@ -62,6 +62,26 @@ function Landing() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
+
+  // Ensure page starts at the very top when component mounts or on refresh
+  useEffect(() => {
+    // Disable browser's scroll restoration
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+    
+    // Force scroll to top immediately
+    window.scrollTo(0, 0)
+    
+    // Also force scroll to top after a brief delay to catch any browser restoration attempts
+    const timeoutId = setTimeout(() => {
+      window.scrollTo(0, 0)
+    }, 0)
+    
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }, [])
 
   return (
     <div className="app">
@@ -209,9 +229,9 @@ function Landing() {
         <p className="footer-question">like what you see?</p>
         <h2 className="footer-cta">let's connect!</h2>
         <div className="footer-links">
-          <a href="https://www.linkedin.com/in/john-y-269ab4260/" className="footer-link" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="https://www.linkedin.com/in/john-y-269ab4260/" className="footer-link">linkedin</a>
           <a href="mailto:johnyumul.ph@gmail.com" className="footer-link">email</a>
-          <a href="https://www.instagram.com/john.yml/" className="footer-link" target="_blank" rel="noopener noreferrer">instagram</a>
+          <a href="https://www.instagram.com/john.yml/" className="footer-link">instagram</a>
         </div>
       </footer>
     </div>
