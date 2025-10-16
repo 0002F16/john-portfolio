@@ -198,7 +198,7 @@
 
 /* About Content */
 .about-content {
-  padding: 8rem 2rem 4rem;
+  padding: 6rem 2rem 2rem;
   max-width: 1200px;
   margin: 0;
   animation: slideUp 1s ease-out;
@@ -224,11 +224,26 @@
 .about-description {
   font-family: 'Prestige Elite Std', 'Space Mono', monospace;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #000000;
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0;
   letter-spacing: 0.02em;
+}
+
+.about-list {
+  font-family: 'Prestige Elite Std', 'Space Mono', monospace;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #000000;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  list-style: none;
+  padding: 0;
+}
+
+.about-list li {
+  margin-bottom: 0.5rem;
 }
 
 /* Image Gallery */
@@ -236,7 +251,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
   width: 100vw;
   padding: 0 2rem;

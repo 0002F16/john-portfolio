@@ -75,9 +75,30 @@ function About() {
       {/* About Content */}
       <main className="about-content">
         <div className="about-text">
-          <h1 className="about-title">about me</h1>
+          <h1 className="about-title" style={{ marginBottom: '1rem' }}>i'm a designer, tinkerer, & product thinker—always chasing what's next.</h1>
+          
+          <p className="about-description" style={{ marginBottom: '0.75rem' }}>
+            i like building things that make sense — ideas grounded in real problems, tested fast, and designed for people who'll actually use them.
+          </p>
+
+          <p className="about-description" style={{ marginBottom: '1rem' }}>
+            i've worked with early-stage and hyper-growth startups, helping teams move from raw concepts to shippable products that deliver clear value.
+          </p>
+          
+          <p className="about-description" style={{ marginBottom: '0.75rem' }}>
+            outside of design and being a compsci major, i'm:
+          </p>
+          
+          <ul className="about-list" style={{ marginLeft: '2rem', marginBottom: '1rem' }}>
+            <li>📚 running a 400-member <a href="https://www.instagram.com/genz_bookclub/" target="_blank" rel="noopener noreferrer">book club</a></li>
+            <li>🍕 hosting tech and startup dinners at <a href="https://www.linkedin.com/company/pizzafriends/" target="_blank" rel="noopener noreferrer">pizza and friends</a></li>
+            <li>🔥 keeping a 600-day duolingo streak alive</li>
+            <li>♠️ grinding poker</li>
+            <li>🎵 making music in my bedroom</li>
+          </ul>
+
           <p className="about-description">
-            This is where you can add your personal story, background, and what makes you unique.
+            reach me at <a href="mailto:johnyumul.ph@gmail.com">johnyumul.ph@gmail.com</a> — can't wait to meet you 🤝
           </p>
         </div>
       </main>
