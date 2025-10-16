@@ -16,6 +16,39 @@
   z-index: 1000;
   background-color: #ffffff;
   border-bottom: 1px solid #d0d0d0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.header-logo:hover {
+  opacity: 0.6;
+}
+
+.logo-name {
+  font-family: 'Prestige Elite Std', 'Space Mono', monospace;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #000000;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+.logo-title {
+  font-family: 'Prestige Elite Std', 'Space Mono', monospace;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #666666;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
 }
 
 .nav {
@@ -104,6 +137,37 @@
   text-align: center;
 }
 
+.mobile-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.mobile-logo:hover {
+  opacity: 0.6;
+}
+
+.mobile-logo-name {
+  font-family: 'Prestige Elite Std', 'Space Mono', monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #000000;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+.mobile-logo-title {
+  font-family: 'Prestige Elite Std', 'Space Mono', monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #666666;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
 .mobile-nav-link {
   font-family: 'Prestige Elite Std', 'Space Mono', monospace;
   font-weight: 500;
@@ -122,8 +186,6 @@
 /* Hero Section */
 .hero {
   padding: 8rem 2rem 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
   animation: slideUp 1s ease-out;
 }
 
@@ -164,8 +226,6 @@
 /* Featured Projects Section */
 .featured-projects {
   padding: 6rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .projects-title {
@@ -229,8 +289,6 @@
 .organizations {
   padding: 4rem 2rem 2rem;
   text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
   animation: slideUp 1s ease-out 0.3s backwards;
 }
 
@@ -376,8 +434,6 @@
 /* Footer Section */
 .footer {
   padding: 4.2rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
   text-align: left;
   position: relative;
 }
@@ -436,6 +492,10 @@
 @media (max-width: 768px) {
   .header {
     padding: 0.975rem 1.5rem;
+  }
+  
+  .header-logo {
+    display: none;
   }
   
   .nav {
