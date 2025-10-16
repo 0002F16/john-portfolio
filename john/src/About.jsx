@@ -53,55 +53,10 @@ function About() {
 
       {/* About Content */}
       <main className="about-content">
-        <div className="about-images-grid">
-          <div className="about-image-container">
-            <div className="image-placeholder">
-              <span className="placeholder-text">Image 1</span>
-              <span className="placeholder-subtitle">Outdoor Portrait</span>
-            </div>
-          </div>
-          
-          <div className="about-image-container">
-            <div className="image-placeholder">
-              <span className="placeholder-text">Image 2</span>
-              <span className="placeholder-subtitle">Group Photo</span>
-            </div>
-          </div>
-          
-          <div className="about-image-container">
-            <div className="image-placeholder">
-              <span className="placeholder-text">Image 3</span>
-              <span className="placeholder-subtitle">Photographer</span>
-            </div>
-          </div>
-          
-          <div className="about-image-container">
-            <div className="image-placeholder">
-              <span className="placeholder-text">Image 4</span>
-              <span className="placeholder-subtitle">Dancer</span>
-            </div>
-          </div>
-          
-          <div className="about-image-container">
-            <div className="image-placeholder">
-              <span className="placeholder-text">Image 5</span>
-              <span className="placeholder-subtitle">Performance</span>
-            </div>
-          </div>
-          
-          <div className="about-image-container">
-            <div className="image-placeholder">
-              <span className="placeholder-text">Image 6</span>
-              <span className="placeholder-subtitle">Mountain Group</span>
-            </div>
-          </div>
-        </div>
-        
         <div className="about-text">
           <h1 className="about-title">about me</h1>
           <p className="about-description">
-            This is where you can add your personal story, background, and what makes you unique. 
-            The images above represent different aspects of your life and work.
+            This is where you can add your personal story, background, and what makes you unique.
           </p>
         </div>
       </main>
