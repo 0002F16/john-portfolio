@@ -78,7 +78,7 @@ function About() {
           </p>
 
           <p className="about-description" style={{ marginBottom: '1rem' }}>
-            i've worked with early-stage and hyper-growth startups, helping teams move from raw concepts to shippable products that deliver clear value.
+            i've worked with early-stage and hyper-growth startups, helping teams move from drafts of ideas to shippable products that deliver value.
           </p>
           
           <p className="about-description" style={{ marginBottom: '0.75rem' }}>
