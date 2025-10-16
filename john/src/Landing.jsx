@@ -75,7 +75,7 @@ function Landing() {
           <a href="#work" className="nav-link">work</a>
           <Link to="/about" className="nav-link">about</Link>
           <a href="#fun" className="nav-link">fun</a>
-          <a href="#resume" className="nav-link">resume</a>
+          <a href="/John_Yumul_Resume.pdf" className="nav-link" target="_blank" rel="noopener noreferrer">resume</a>
         </nav>
         
         {/* Mobile Menu Button */}
@@ -99,7 +99,7 @@ function Landing() {
             <a href="#work" className="mobile-nav-link" onClick={toggleMobileMenu}>work</a>
             <Link to="/about" className="mobile-nav-link" onClick={toggleMobileMenu}>about</Link>
             <a href="#fun" className="mobile-nav-link" onClick={toggleMobileMenu}>fun</a>
-            <a href="#resume" className="mobile-nav-link" onClick={toggleMobileMenu}>resume</a>
+            <a href="/John_Yumul_Resume.pdf" className="mobile-nav-link" onClick={toggleMobileMenu} target="_blank" rel="noopener noreferrer">resume</a>
           </div>
         </div>
       </header>
