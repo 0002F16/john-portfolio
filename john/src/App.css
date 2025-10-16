@@ -318,7 +318,7 @@
 
 .slideshow-item {
   flex: 0 0 auto;
-  width: calc(100% / 10); /* Each logo takes 1/8 of the track width */
+  width: calc(100% / 13); /* Each logo takes 1/13 of the track width */
   display: flex;
   justify-content: center;
   align-items: center;

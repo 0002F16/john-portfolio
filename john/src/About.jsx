@@ -60,6 +60,39 @@ function About() {
           </p>
         </div>
       </main>
+      
+      {/* Image Gallery */}
+      <div className="about-gallery">
+        <div className="gallery-item">
+          <img src="/images/about/about-1.jpg" alt="About gallery image 1" />
+        </div>
+        <div className="gallery-item">
+          <img src="/images/about/about-2.jpg" alt="About gallery image 2" />
+        </div>
+        <div className="gallery-item">
+          <img src="/images/about/about-3.jpg" alt="About gallery image 3" />
+        </div>
+        <div className="gallery-item">
+          <img src="/images/about/about-4.jpg" alt="About gallery image 4" />
+        </div>
+        <div className="gallery-item">
+          <img src="/images/about/about-5.jpg" alt="About gallery image 5" />
+        </div>
+        <div className="gallery-item">
+          <img src="/images/about/about-6.jpg" alt="About gallery image 6" />
+        </div>
+      </div>
+
+      {/* Footer Section */}
+      <footer className="footer">
+        <p className="footer-question">like what you see?</p>
+        <h2 className="footer-cta">let's connect!</h2>
+        <div className="footer-links">
+          <a href="https://www.linkedin.com/in/john-y-269ab4260/" className="footer-link">linkedin</a>
+          <a href="mailto:johnyumul.ph@gmail.com" className="footer-link">email</a>
+          <a href="https://www.instagram.com/john.yml/" className="footer-link">instagram</a>
+        </div>
+      </footer>
     </div>
   )
 }
