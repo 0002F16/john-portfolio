@@ -112,10 +112,6 @@ function Landing() {
         {/* Mobile Menu Overlay */}
         <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
           <div className="mobile-menu-content">
-            <Link to="/" className="mobile-logo" onClick={toggleMobileMenu}>
-              <span className="mobile-logo-name">john yumul</span>
-              <span className="mobile-logo-title">product designer</span>
-            </Link>
             <a href="#work" className="mobile-nav-link" onClick={toggleMobileMenu}>work</a>
             <Link to="/about" className="mobile-nav-link" onClick={toggleMobileMenu}>about</Link>
             <a href="#fun" className="mobile-nav-link" onClick={toggleMobileMenu}>fun</a>
