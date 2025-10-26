@@ -39,6 +39,16 @@ function OnlineCareers() {
               className="project-detail-image"
             />
           </div>
+
+          {/* Goals Section */}
+          <div className="project-goals-section">
+            <h3 className="goals-title">goals</h3>
+            <ul className="goals-list">
+              <li>Create a job hiring experience that feels transparent and human.</li>
+              <li>Simplify onboarding for both employers and jobseekers.</li>
+              <li>Build a design system that keeps developers fast and consistent.</li>
+            </ul>
+          </div>
         </div>
       </main>
 

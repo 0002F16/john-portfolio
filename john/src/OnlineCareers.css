@@ -49,8 +49,8 @@
 
 /* Project Body Text */
 .project-body {
-  text-align: left;
-  max-width: 600px;
+  text-align: left; /* modify this later */
+  max-width: 600px; 
   margin: 0 auto;
 }
 
@@ -82,6 +82,50 @@
   margin: 0 auto;
 }
 
+/* Goals Section */
+.project-goals-section {
+  margin: 4rem auto 0;
+  text-align: left;
+  max-width: 600px;
+}
+
+.goals-title {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-light);
+  font-size: clamp(var(--text-3xl), 3vw, var(--text-5xl));
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 2rem 0;
+}
+
+.goals-list {
+  font-family: var(--font-text);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.goals-list li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.goals-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000000;
+}
+
+.goals-list li:last-child {
+  margin-bottom: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .project-page {
@@ -106,5 +150,17 @@
   
   .project-detail-image-container {
     margin: 3rem auto 0;
+  }
+  
+  .project-goals-section {
+    margin: 3rem auto 0;
+  }
+  
+  .goals-title {
+    font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  }
+  
+  .goals-list {
+    font-size: var(--text-sm);
   }
 }
