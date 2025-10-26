@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
@@ -57,26 +56,6 @@ const testimonials = [
 function Landing() {
   // Create a duplicated array for seamless infinite scrolling
   const duplicatedLogos = [...companyLogos, ...companyLogos]
-
-  // Ensure page starts at the very top when component mounts or on refresh
-  useEffect(() => {
-    // Disable browser's scroll restoration
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual'
-    }
-    
-    // Force scroll to top immediately
-    window.scrollTo(0, 0)
-    
-    // Also force scroll to top after a brief delay to catch any browser restoration attempts
-    const timeoutId = setTimeout(() => {
-      window.scrollTo(0, 0)
-    }, 0)
-    
-    return () => {
-      clearTimeout(timeoutId)
-    }
-  }, [])
 
   return (
     <div className="app">
