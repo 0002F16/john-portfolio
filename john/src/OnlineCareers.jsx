@@ -27,7 +27,7 @@ function OnlineCareers() {
               I led product design for a startup job site, OnlineCareers.PH. To date, we've reached 500 regular users and are now onboarding more employers.
             </p>
             <p className="body-text">
-              As the sole product designer, I designed both the jobseeker and employer sides of the platform. Over five months, I worked closely with two fullstack developers to ship everything end to end from the first wireframe to launch.
+              As the sole product designer, I designed both the jobseeker and employer sides of the platform. Over five months, I worked closely with two fullstack developers to ship everything end to end from wireframes to launch.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ function OnlineCareers() {
               I handled everything from wireframes to final UI. I designed the system, built prototypes, and ran quick usability tests with team members.
             </p>
             <p className="body-text">
-              We were a small startup, no budget for research, no full product team. So we worked smart. I used informal tests to check if flows made sense. I watched how people moved through the product, where they hesitated, what they missed.
+              We were a small startup, no budget for research, no full product team. So we worked smart. I did a lot of competitor scans to evaluate features and informal tests to check if flows worked for our target users. I watched how people moved through the product, where they got stuck, and used what I gathered to iterate on my initial designs.
             </p>
             <p className="body-text">
               Developer constraints shaped a lot of my work. Some design ideas needed backend overhauls. Instead of pushing, I adjusted flows to match what we could build. Emails were another limit. Sending too many was expensive, so I redesigned communication to be lean but useful. Understanding the backend helped me balance design quality with engineering effort.
