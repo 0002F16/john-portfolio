@@ -30,6 +30,15 @@ function OnlineCareers() {
               As the sole product designer, I designed both the jobseeker and employer sides of the platform. Over five months, I worked closely with two fullstack developers to ship everything end to end from the first wireframe to launch.
             </p>
           </div>
+
+          {/* Project Detail Image */}
+          <div className="project-detail-image-container">
+            <img 
+              src="/images/projects/onlinecareers-1.png" 
+              alt="OnlineCareers.ph platform screenshot showing job search interface"
+              className="project-detail-image"
+            />
+          </div>
         </div>
       </main>
 
