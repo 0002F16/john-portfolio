@@ -1,16 +1,10 @@
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 import './App.css'
 import './About.css'
+import Header from './Header'
+import Footer from './Footer'
 
 function About() {
-  // Mobile menu state
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
-
   // Ensure page starts at the very top when component mounts or on refresh
   useEffect(() => {
     // Disable browser's scroll restoration
@@ -34,44 +28,12 @@ function About() {
   return (
     <div className="about-page">
       {/* Header Navigation */}
-      <header className="header">
-        <Link to="/" className="header-logo">
-          <span className="logo-name">john yumul</span>
-          <span className="logo-title">product designer</span>
-        </Link>
-        <nav className="nav">
-          <a href="/#work" className="nav-link">work</a>
-          <Link to="/about" className="nav-link active">about</Link>
-          <a href="/#fun" className="nav-link">fun</a>
-          <a href="/John_Yumul_Resume.pdf" className="nav-link" target="_blank" rel="noopener noreferrer">resume</a>
-        </nav>
-        
-        {/* Mobile Menu Button */}
-        <button 
-          className={`mobile-menu-button ${isMobileMenuOpen ? 'open' : ''}`}
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-        >
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-        </button>
-        
-        {/* Mobile Menu Overlay */}
-        <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
-          <div className="mobile-menu-content">
-            <a href="/#work" className="mobile-nav-link" onClick={toggleMobileMenu}>work</a>
-            <Link to="/about" className="mobile-nav-link" onClick={toggleMobileMenu}>about</Link>
-            <a href="/#fun" className="mobile-nav-link" onClick={toggleMobileMenu}>fun</a>
-            <a href="/John_Yumul_Resume.pdf" className="mobile-nav-link" onClick={toggleMobileMenu} target="_blank" rel="noopener noreferrer">resume</a>
-          </div>
-        </div>
-      </header>
+      <Header currentPage="about" />
 
       {/* About Content */}
       <main className="about-content">
         <div className="about-text">
-          <h1 className="about-title" style={{ marginBottom: '1rem' }}>i'm a designer, tinkerer, & product thinker—always chasing what's next.</h1>
+          <h1 className="about-title" style={{ marginBottom: '1rem' }}>i'm a designer, builder, & product thinker—always chasing what's next.</h1>
           
           <p className="about-description" style={{ marginBottom: '0.75rem' }}>
             i like building things that make sense — ideas grounded in real problems, tested fast, and designed for people who'll actually use them.
@@ -122,15 +84,7 @@ function About() {
       </div>
 
       {/* Footer Section */}
-      <footer className="footer">
-        <p className="footer-question">like what you see?</p>
-        <h2 className="footer-cta">let's connect!</h2>
-        <div className="footer-links">
-          <a href="https://www.linkedin.com/in/john-y-269ab4260/" className="footer-link" target="_blank" rel="noopener noreferrer">linkedin</a>
-          <a href="mailto:johnyumul.ph@gmail.com" className="footer-link">email</a>
-          <a href="https://www.instagram.com/john.yml/" className="footer-link" target="_blank" rel="noopener noreferrer">instagram</a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
