@@ -33,17 +33,17 @@ function About() {
       {/* About Content */}
       <main className="about-content">
         <div className="about-text">
-          <h1 className="about-title" style={{ marginBottom: '1rem' }}>i'm a designer, builder, & product thinker—always chasing what's next.</h1>
+          <h1 className="heading-1" style={{ marginBottom: '1rem' }}>i'm a designer, builder, & product thinker—always chasing what's next.</h1>
           
-          <p className="about-description" style={{ marginBottom: '0.75rem' }}>
+          <p className="text-base" style={{ marginBottom: '0.75rem' }}>
             i like building things that make sense — ideas grounded in real problems, tested fast, and designed for people who'll actually use them.
           </p>
 
-          <p className="about-description" style={{ marginBottom: '1rem' }}>
+          <p className="text-base" style={{ marginBottom: '1rem' }}>
             i've worked with early-stage and hyper-growth startups, helping teams move from drafts of ideas to shippable products that deliver value.
           </p>
           
-          <p className="about-description" style={{ marginBottom: '0.75rem' }}>
+          <p className="text-base" style={{ marginBottom: '0.75rem' }}>
             outside of design and being a compsci major, i'm:
           </p>
           
@@ -55,7 +55,7 @@ function About() {
             <li>🎵 making music in my bedroom</li>
           </ul>
 
-          <p className="about-description">
+          <p className="text-base">
             reach me at <a href="mailto:johnyumul.ph@gmail.com">johnyumul.ph@gmail.com</a> — can't wait to meet you 🤝
           </p>
         </div>

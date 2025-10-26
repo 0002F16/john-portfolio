@@ -84,19 +84,19 @@ function Landing() {
 
       {/* Hero Section */}
       <main className="hero">
-        <h1 className="hero-title">
+        <h1 className="heading-1">
           <span className="hero-line">i'm john, and i help startups build</span>
           <span className="hero-line">user-friendly and impactful</span>
           <span className="hero-line">digital products</span>
         </h1>
-        <p className="hero-subtitle">
+        <p className="text-large">
           right now, you can find me doing ux research work for angkas 🛵☁️
         </p>
       </main>
 
       {/* Organizations Section */}
       <section className="organizations">
-        <h2 className="organizations-title">
+        <h2 className="text-large">
           here are some of the organizations i've worked with
         </h2>
         
@@ -124,7 +124,7 @@ function Landing() {
 
       {/* Featured Projects Section */}
       <section className="featured-projects">
-        <h2 className="projects-title">featured projects</h2>
+        <h2 className="heading-2">featured projects</h2>
         
         <div className="project">
           <div className="project-image-container">
@@ -134,8 +134,8 @@ function Landing() {
               className="project-image"
             />
           </div>
-          <h3 className="project-title">onlinecareers.ph</h3>
-          <p className="project-description">building a job website from the ground up</p>
+          <h3 className="heading-4">onlinecareers.ph</h3>
+          <p className="text-base">building a job website from the ground up</p>
         </div>
 
         <div className="project">
@@ -146,14 +146,14 @@ function Landing() {
               className="project-image"
             />
           </div>
-          <h3 className="project-title">angkas uxr internship</h3>
-          <p className="project-description">user experience research for the country's leading motor taxi hailing app</p>
+          <h3 className="heading-4">angkas uxr internship</h3>
+          <p className="text-base">user experience research for the country's leading motor taxi hailing app</p>
         </div>
       </section>
 
       {/* Testimonials Section */}
       <section className="testimonials">
-        <h2 className="testimonials-title">what people say</h2>
+        <h2 className="heading-2">what people say</h2>
         
         <div className="testimonials-grid">
           <div className="testimonials-column">
