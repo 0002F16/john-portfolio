@@ -5,7 +5,7 @@
   min-height: 100vh;
   background-color: #ffffff;
   color: #000000;
-  padding: 6rem 2rem 2rem;
+  padding: 10rem 2rem 2rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -55,6 +55,13 @@
   max-width: 1200px;
 }
 
+.project-detail-image-container.first-image {
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+}
+
 .project-detail-image {
   width: 100%;
   max-width: 1200px;
@@ -63,11 +70,15 @@
   margin: 0 auto;
 }
 
+/* Final Section Spacing */
+.section-container.final-section {
+  margin-bottom: 6rem;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .project-page {
-    padding: 6rem 1.5rem 2rem;
+    padding: 10rem 1.5rem 2rem;
   }
   
   .project-title-line {
