@@ -13,7 +13,7 @@ function About() {
       {/* About Content */}
       <main className="about-content">
         <div className="about-text">
-          <h1 className="heading-1" style={{ marginBottom: '1rem' }}>i'm a designer, builder, & product thinker—always chasing what's next.</h1>
+          <h1 className="heading-2" style={{ marginBottom: '1rem' }}>i'm a designer, builder, & product thinker—always chasing what's next.</h1>
           
           <p className="text-base" style={{ marginBottom: '0.75rem' }}>
             i like building things that make sense — ideas grounded in real problems, tested fast, and designed for people who'll actually use them.
