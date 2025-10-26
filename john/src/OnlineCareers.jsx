@@ -1,5 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
+import './OnlineCareers.css'
 
 function OnlineCareers() {
   return (
@@ -7,9 +8,29 @@ function OnlineCareers() {
       {/* Header Navigation */}
       <Header currentPage="onlinecareers" />
 
-      {/* Main Content - Blank Space */}
+      {/* Main Content */}
       <main className="project-page">
-        {/* This is intentionally blank as requested */}
+        <div className="project-content">
+          {/* Project Title */}
+          <div className="project-title">
+            <h2 className="project-title-line">onlinecareers.ph:{"\n"}building a job site from the ground up</h2>
+          </div>
+
+          {/* Project Metadata */}
+          <div className="project-metadata">
+            <p className="text-metadata">product design * nov 2024-apr 2025</p>
+          </div>
+
+          {/* Body Text */}
+          <div className="project-body">
+            <p className="text-body">
+              I led product design for a startup job site, OnlineCareers.PH. To date, we've reached 500 regular users and are now onboarding more employers.
+            </p>
+            <p className="text-body">
+              As the sole product designer, I designed both the jobseeker and employer sides of the platform. Over five months, I worked closely with two fullstack developers to ship everything end to end from the first wireframe to launch.
+            </p>
+          </div>
+        </div>
       </main>
 
       {/* Footer Section */}

@@ -1,0 +1,91 @@
+/* OnlineCareers Project Page Styles */
+
+/* Project Page Layout */
+.project-page {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 6rem 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.project-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Project Title */
+.project-title {
+  margin-bottom: 2rem;
+}
+
+.project-title-line {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-thin);
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+  display: block;
+  white-space: pre-line;
+}
+
+/* Project Metadata */
+.project-metadata {
+  margin-bottom: 3rem;
+}
+
+.text-metadata {
+  font-family: var(--font-text);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
+  margin: 0;
+}
+
+/* Project Body Text */
+.project-body {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.text-body {
+  font-family: var(--font-text);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
+  margin: 0 0 1.5rem 0;
+}
+
+.text-body:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-page {
+    padding: 6rem 1.5rem 2rem;
+  }
+  
+  .project-title-line {
+    font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  }
+  
+  .project-metadata {
+    margin-bottom: 2rem;
+  }
+  
+  .text-metadata {
+    font-size: var(--text-sm);
+  }
+  
+  .text-body {
+    font-size: var(--text-sm);
+  }
+}

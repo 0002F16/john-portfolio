@@ -195,7 +195,7 @@
 }
 
 .project {
-  margin-bottom: 6rem;
+  margin-top: 6rem;
 }
 
 .project:last-child {
@@ -436,7 +436,7 @@
   }
   
   .project {
-    margin-bottom: 4rem;
+    margin-top: 6rem;
   }
   
   .project-image {
