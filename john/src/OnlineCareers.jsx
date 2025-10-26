@@ -22,11 +22,11 @@ function OnlineCareers() {
           </div>
 
           {/* Body Text */}
-          <div className="project-body">
-            <p className="text-body">
+          <div className="section-container">
+            <p className="body-text">
               I led product design for a startup job site, OnlineCareers.PH. To date, we've reached 500 regular users and are now onboarding more employers.
             </p>
-            <p className="text-body">
+            <p className="body-text">
               As the sole product designer, I designed both the jobseeker and employer sides of the platform. Over five months, I worked closely with two fullstack developers to ship everything end to end from the first wireframe to launch.
             </p>
           </div>
@@ -41,9 +41,9 @@ function OnlineCareers() {
           </div>
 
           {/* Goals Section */}
-          <div className="project-goals-section">
-            <h3 className="goals-title">goals</h3>
-            <ul className="goals-list">
+          <div className="section-container">
+            <h3 className="section-heading">goals</h3>
+            <ul className="body-list">
               <li>Create a job hiring experience that feels transparent and human.</li>
               <li>Simplify onboarding for both employers and jobseekers.</li>
               <li>Build a design system that keeps developers fast and consistent.</li>
