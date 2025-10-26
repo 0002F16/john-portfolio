@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -126,7 +127,7 @@ function Landing() {
       <section className="featured-projects">
         <h2 className="heading-2">featured projects</h2>
         
-        <div className="project">
+        <Link to="/onlinecareers" className="project">
           <div className="project-image-container">
             <img 
               src="/images/projects/onlinecareers.png" 
@@ -136,7 +137,7 @@ function Landing() {
           </div>
           <h3 className="heading-4">onlinecareers.ph</h3>
           <p className="text-base">building a job website from the ground up</p>
-        </div>
+        </Link>
 
         <div className="project">
           <div className="project-image-container">
