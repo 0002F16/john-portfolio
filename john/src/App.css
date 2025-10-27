@@ -196,6 +196,8 @@
 
 .project {
   margin-top: 6rem;
+  text-decoration: none;
+  color: inherit;
 }
 
 .project:last-child {

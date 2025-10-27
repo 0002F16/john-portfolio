@@ -3,6 +3,7 @@ import './App.css'
 import Landing from './Landing'
 import About from './About'
 import OnlineCareers from './OnlineCareers'
+import Angkas from './Angkas'
 import ScrollToTop from './ScrollToTop'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/onlinecareers" element={<OnlineCareers />} />
+        <Route path="/angkas" element={<Angkas />} />
       </Routes>
     </Router>
   )

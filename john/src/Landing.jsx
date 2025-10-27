@@ -118,7 +118,7 @@ function Landing() {
           <p className="text-base">building a job website from the ground up</p>
         </Link>
 
-        <div className="project">
+        <Link to="/angkas" className="project">
           <div className="project-image-container">
             <img 
               src="/images/projects/angkas.png" 
@@ -128,7 +128,7 @@ function Landing() {
           </div>
           <h3 className="heading-4">angkas uxr internship</h3>
           <p className="text-base">user experience research for the country's leading motor taxi hailing app</p>
-        </div>
+        </Link>
       </section>
 
       {/* Testimonials Section */}

@@ -1,6 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
-import './OnlineCareers.css'
+import './ProjectPage.css'
 
 function OnlineCareers() {
   return (
