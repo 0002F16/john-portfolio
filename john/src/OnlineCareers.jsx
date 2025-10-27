@@ -74,6 +74,14 @@ function OnlineCareers() {
 
           <div className="project-detail-image-container">
             <img 
+              src="/images/projects/onlinecareers-6.png" 
+              alt="Job report functionality screenshot"
+              className="project-detail-image"
+            />
+          </div>
+
+          <div className="project-detail-image-container">
+            <img 
               src="/images/projects/onlinecareers-3.png" 
               alt="OnlineCareers.ph platform screenshot showing chat interface"
               className="project-detail-image"
@@ -95,6 +103,8 @@ function OnlineCareers() {
               className="project-detail-image"
             />
           </div>
+
+
 
            <div className="section-container final-section">
              <h3 className="section-heading">takeaways</h3>
