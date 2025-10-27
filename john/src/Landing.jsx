@@ -117,6 +117,7 @@ function Landing() {
           <h3 className="heading-4">onlinecareers.ph</h3>
           <p className="text-base">building a job website from the ground up</p>
         </Link>
+        
 
         <Link to="/angkas" className="project">
           <div className="project-image-container">

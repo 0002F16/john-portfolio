@@ -191,13 +191,17 @@
 
 /* Add spacing between featured projects heading and images */
 .featured-projects .heading-2 {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .project {
-  margin-top: 6rem;
+  display: block;
   text-decoration: none;
   color: inherit;
+}
+
+.project:not(:first-of-type) {
+  margin-top: 4rem; /* Adjust this value to increase/decrease spacing between projects */
 }
 
 .project:last-child {
@@ -437,7 +441,7 @@
     margin-bottom: 3rem;
   }
   
-  .project {
+  .project:not(:first-of-type) {
     margin-top: 6rem;
   }
   
