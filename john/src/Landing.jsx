@@ -130,6 +130,19 @@ function Landing() {
           <h3 className="heading-4">angkas uxr internship</h3>
           <p className="text-base">user experience research for the country's leading motor taxi hailing app</p>
         </Link>
+        
+
+        <Link to="/pmin60" className="project">
+          <div className="project-image-container">
+            <img 
+              src="/images/projects/pmin60.png" 
+              alt="PM in 60 website screenshot"
+              className="project-image"
+            />
+          </div>
+          <h3 className="heading-4">pm in 60</h3>
+          <p className="text-base">elevating a tech workshop's digital experience</p>
+        </Link>
       </section>
 
       {/* Testimonials Section */}
